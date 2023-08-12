@@ -46,4 +46,12 @@ class NoteController extends Controller
         }
         return view('welcome', ['notes' => $notes]);
     }
+
+    function getNote(Request $request, string $id)
+    {
+        \Log::info(Note::where('id', $id)->first());
+        return view('note', [
+            'note' => Note::where('id', $id)->first()
+        ]);
+    }
 }

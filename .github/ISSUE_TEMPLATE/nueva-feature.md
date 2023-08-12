@@ -1,12 +1,16 @@
 ---
-name: Nueva feature
-about: Subtítulo nueva feature
+name: Template nueva feature
+about: Template para nuevas features
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
-**Descripción breve**
+## Descripción
 
-**Historia de usuario**
+
+## Requisitos
+- [ ] 
+- [ ] 
+- [ ] 

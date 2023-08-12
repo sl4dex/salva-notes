@@ -18,3 +18,5 @@ Route::get('/', [NoteController::class, 'index']);
 
 // Route::post('/notes', [NoteController::class, 'getNotes'])->name('seeNotes');
 Route::post('/note', [NoteController::class, 'postNote'])->name('saveNote');
+
+Route::get('/note/{id}', [NoteController::class, 'getNote']); //, ['id', $id]
