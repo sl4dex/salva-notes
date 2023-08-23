@@ -20,3 +20,7 @@ Route::get('/', [NoteController::class, 'index']);
 Route::post('/note', [NoteController::class, 'postNote'])->name('saveNote');
 
 Route::get('/note/{id}', [NoteController::class, 'getNote']); //, ['id', $id]
+
+Route::put('/note/{id}', [NoteController::class, 'putNote'])->name('editNote'); //, ['id', $id]
+
+Route::delete('/note/{id}', [NoteController::class, 'delNote'])->name('deleteNote'); //, ['id', $id]

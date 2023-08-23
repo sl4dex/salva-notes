@@ -37,7 +37,7 @@
                         <hr>
                     @endif
                         <div>
-                            <a class="font-semibold" href="note/{{$note->id}}" target="_blank">{{$note->title}}</a>
+                            <a class="font-semibold" href="note/{{$note->id}}">{{$note->title}}</a>
                             <!-- <p>{{ Illuminate\Mail\Markdown::parse($note->content_md) }}</p> -->
                             <!-- <p style="white-space: pre-line">{!! $note->content_render !!}</p> -->
                         </div>

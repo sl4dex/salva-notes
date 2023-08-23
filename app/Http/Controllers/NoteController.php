@@ -49,9 +49,25 @@ class NoteController extends Controller
 
     function getNote(Request $request, string $id)
     {
-        \Log::info(Note::where('id', $id)->first());
+        \Log::info("hgettt");
+        // \Log::info(Note::where('id', $id)->first());
         return view('note', [
             'note' => Note::where('id', $id)->first()
         ]);
+    }
+
+    function putNote(Request $request, string $id)
+    {
+        Note::where('id', $id)->update([
+            'title' => $request->editedTitle,
+            'content_md' => $request->editedContent
+        ]);
+        return redirect("/note/$id");
+    }
+
+    function delNote(Request $request, string $id)
+    {
+        Note::destroy($id);
+        return redirect("/");
     }
 }
